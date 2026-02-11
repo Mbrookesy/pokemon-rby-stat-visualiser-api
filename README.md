@@ -17,13 +17,11 @@ A RESTful API providing detailed information on Pokémon from **Red, Blue, and Y
 
 ---
 
-## Endpoints
+# Endpoints
 
-### Get All Pokémon Names
+## Get All Pokémon Names
 
-**Endpoint:** 
-
-# GET /pokemon
+### GET /pokemon
 **Description:**  
 Returns a list of all Pokémon with their names and Pokédex numbers.
 
@@ -41,9 +39,9 @@ Returns a list of all Pokémon with their names and Pokédex numbers.
 ]
 ```
 
-# Get Pokémon by Dex Number
+## Get Pokémon by Dex Number
 
-## GET /pokemon/{id}
+### GET /pokemon/{id}
 **Description:**  
 Retrieve full details for a Pokémon, including stats, type weaknesses, and resistances.
 
@@ -90,9 +88,9 @@ Retrieve full details for a Pokémon, including stats, type weaknesses, and resi
 }
 ```
 
-# Get Pokémon Moveset
+## Get Pokémon Moveset
 
-## GET /moveset/{id}
+### GET /moveset/{id}
 **Description:**  
 Retrieve all moves a Pokémon can learn in Gen 1, including level-up moves and TM/HM moves.
 
@@ -132,9 +130,9 @@ Retrieve all moves a Pokémon can learn in Gen 1, including level-up moves and T
 }
 ```
 
-# Get Pokémon Encounter Table
+## Get Pokémon Encounter Table
 
-## GET /encounter-table/{id}
+### GET /encounter-table/{id}
 **Description:**  
 Get all locations and encounter rates for a specific Pokémon in Red, Blue, and Yellow versions.
 
