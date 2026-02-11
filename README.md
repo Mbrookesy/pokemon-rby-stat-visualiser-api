@@ -2,20 +2,62 @@
 
 A RESTful API providing detailed information on Pokémon from **Red, Blue, and Yellow** (RBY) versions, including stats, type weaknesses/resistances, movesets, and encounter tables.
 
+## Getting Started
+
+Follow these steps to run the Pokémon RBY Stat Visualizer API locally.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- **Java 17** or higher  
+- **Gradle** (if you prefer the wrapper, `gradlew` works without installing Gradle)  
+- **PostgreSQL** or another supported SQL database  
+- **Git** (to clone the repository)
+
 ---
 
-## Table of Contents
+### 1. Clone the Repository
 
-- [Endpoints](#endpoints)  
-  - [Get All Pokémon Names](#get-all-pokémon-names)  
-  - [Get Pokémon by Dex Number](#get-pokémon-by-dex-number)  
-  - [Get Pokémon Moveset](#get-pokémon-moveset)  
-  - [Get Pokémon Encounter Table](#get-pokémon-encounter-table)  
-- [Response Formats](#response-formats)  
-- [Error Handling](#error-handling)  
-- [Technologies](#technologies)  
+```bash
+git clone https://github.com/mbrookesy/pokemon-rby-stat-visualiser-api.git
+cd pokemon-rby-stat-visualiser-api
+```
 
----
+### 2. Download the Database
+
+1. Obtain the Pokémon RBY database SQL dump from the repository or release assets (e.g. pokemon_rby.sql).
+2. Create a new database locally (e.g. pokemon_rby_db):
+
+```bash
+psql -U <your_db_username> -c "CREATE DATABASE pokemon_rby_db;"
+```
+3. import the database dump:
+
+```bash
+psql -U <your_db_username> -d pokemon_rby_db -f path/to/pokemon_rby.sql
+```
+
+### configure environment variables
+Create a .env file in the root of the project with the following content:
+```bash
+DB_URL=jdbc:postgresql://localhost:5432/pokemon_rby_db
+DB_USERNAME=your_db_username
+DB_PASSWORD=your_db_password
+SERVER_PORT=8080
+```
+
+### 4. Build the project
+```bash
+./gradlew clean build
+```
+
+### 5. Run the application
+```bash
+./gradlew bootRun
+```
+
+
 
 # Endpoints
 
