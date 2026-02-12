@@ -32,7 +32,7 @@ cd pokemon-rby-stat-visualiser-api
 ```bash
 psql -U <your_db_username> -c "CREATE DATABASE pokemon_rby_db;"
 ```
-3. import the database dump:
+3. import the database dump (The .sql database is found in the repo):
 
 ```bash
 psql -U <your_db_username> -d pokemon_rby_db -f path/to/pokemon_rby.sql
